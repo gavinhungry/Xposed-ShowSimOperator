@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ShowSimOperator" default="help">
+  <property environment="env" />
+  <property name="sdk.dir" value="${env.ANDROID_HOME}" />
+
+  <loadproperties srcFile="project.properties" />
+  <import file="${sdk.dir}/tools/ant/build.xml" />
+
+  <target name="-pre-clean" description="pre-clean project">
+    <delete dir="dist" />
+    <delete dir="res" />
+  </target>
+
+  <target name="build" depends="clean, debug" description="build project">
+    <move file="bin/${ant.project.name}-debug.apk" tofile="dist/${ant.project.name}.apk" />
+  </target>
+</project>
