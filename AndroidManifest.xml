@@ -4,7 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0.0">
 
-  <uses-sdk android:minSdkVersion="23" />
+  <uses-sdk android:minSdkVersion="22" />
 
   <application android:label="Show SIM Operator">
     <meta-data
