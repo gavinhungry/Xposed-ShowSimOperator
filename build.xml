@@ -8,7 +8,19 @@
 
   <target name="-pre-clean" description="pre-clean project">
     <delete dir="dist" />
+    <delete dir="libs" />
     <delete dir="res" />
+  </target>
+
+  <target name="-pre-compile">
+    <pathconvert property="project.class.path">
+      <fileset dir="lib" includes="*.jar" />
+      <path refid="project.target.class.path" />
+    </pathconvert>
+
+    <path id="project.target.class.path">
+      <pathelement path="${project.class.path}" />
+    </path>
   </target>
 
   <target name="build" depends="clean, debug" description="build project">

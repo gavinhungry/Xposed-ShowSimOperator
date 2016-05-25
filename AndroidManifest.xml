@@ -15,6 +15,6 @@
       android:value="Show SIM operator instead of Network operator" />
     <meta-data
       android:name="xposedminversion"
-      android:value="60" />
+      android:value="82" />
   </application>
 </manifest>
